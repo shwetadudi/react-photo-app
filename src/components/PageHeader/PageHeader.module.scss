@@ -1,0 +1,12 @@
+.pageHeader {
+    min-height: 60px;
+    padding: 10px;
+    background: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 20px;
+    }
+}

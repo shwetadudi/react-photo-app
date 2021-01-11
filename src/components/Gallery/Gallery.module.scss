@@ -1,0 +1,10 @@
+.gallery {
+    padding: 20px 10px;
+
+    @media screen and (min-width: 768px) {
+        padding: 100px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

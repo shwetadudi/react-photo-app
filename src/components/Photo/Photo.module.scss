@@ -1,0 +1,59 @@
+.photo {
+    margin: 0 0 50px;
+    padding: 0;
+    border: 1px solid #212121;
+
+    .imgContainer {
+        max-height: 250px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .likeBox, .postCommentBox {
+        padding: 0 30px;
+        display: flex;
+        margin: 20px 0;
+
+        .likes {
+            cursor: pointer;
+
+            &:hover {
+                color: cornflowerblue;
+            }
+        }
+
+        .category {
+            color: darkgreen;
+        }
+    }
+
+    .likeBox {
+        justify-content: space-between;
+    }
+
+    .postCommentBox {
+        justify-content: center;
+    }
+
+    .displayCommentBox {
+        p {
+            background-color: lightgreen;
+            margin: 0;
+            padding: 10px;
+            border: 1px solid #212121;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        width: 100%; /* temp - as images are not of same size */
+    }
+
+    @media screen and (min-width: 768px) {
+        flex-basis: 30%;
+        align-items: center;
+        border: 1px solid #212121;
+        margin: 10px;
+        justify-content: center;
+    }
+}
