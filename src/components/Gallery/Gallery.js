@@ -19,7 +19,7 @@ function Gallery() {
                     {...photo}
                 /> ) : (
                     <div>
-                        Sorry, no results found matching your search criteria.
+                        {store.loading ? "Loading photos..." : "Sorry, no results found matching your search criteria."}
                     </div>
                 )
            }

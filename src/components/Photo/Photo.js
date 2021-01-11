@@ -47,6 +47,7 @@ function Photo({
     };
 
     const postComment = () => {
+        if (!comment) return;
         const [ updatedPhoto, filteredPhotos ] = getFilteredData();
         updatedPhoto.comments = updatedPhoto.comments.concat(comment);
         dispatch(updatePhotos([...filteredPhotos, updatedPhoto]));
@@ -59,7 +60,10 @@ function Photo({
                 <img src={url} />
             </div>
             <div className={styles.likeBox}>
-                <span className={styles.likes} onClick={handleLikeClick}>{!likeStatus ? `${likes} ${likes > 1 ? "Likes" : "Like"}` : `${likes} Unlike`}</span>
+                <div>
+                    <span className={styles.likeCount}>{likes}</span>
+                    <span className={styles.likes} onClick={handleLikeClick}>{!likeStatus ? `${likes > 1 ? "Likes" : "Like"}` : `Unlike`}</span>
+                </div>
                 <span className={styles.category}>{category}</span>
             </div>
             <div className={styles.postCommentBox}>

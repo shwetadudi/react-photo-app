@@ -16,10 +16,16 @@
 
         .likes {
             cursor: pointer;
+            border-bottom: 1px solid #212121;
 
             &:hover {
                 color: cornflowerblue;
             }
+        }
+
+        .likeCount {
+            display: inline-block;
+            margin-right: 10px;
         }
 
         .category {
@@ -33,6 +39,10 @@
 
     .postCommentBox {
         justify-content: center;
+        
+        button {
+            cursor: pointer;
+        }
     }
 
     .displayCommentBox {
